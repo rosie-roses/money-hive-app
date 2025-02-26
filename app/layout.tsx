@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bree_Serif, Nunito_Sans } from "next/font/google";
+import { Bree_Serif, Lato } from "next/font/google";
 import "./globals.css";
 
 
@@ -9,10 +9,10 @@ const breeSerif = Bree_Serif({
   weight: ["400"]
 });
 
-const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
+const lato = Lato({
+  variable: "--font-lato",
   subsets: ["latin"],
-  weight: ["400", "600", "700"]
+  weight: ["400", '700']
 });
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${breeSerif.variable} ${nunitoSans.variable} antialiased`}
+        className={`${breeSerif.variable} ${lato.variable} antialiased`}
       >
         {children}
       </body>

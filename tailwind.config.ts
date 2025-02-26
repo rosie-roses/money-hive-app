@@ -51,7 +51,8 @@ const config: Config = {
   				'5': 'hsl(var(--chart-5))'
   			},
 			black: {
-				1: '#353634'
+				1: '#353634',
+				2: '#4d4d4d',
 			},
 			bankGradient: "#FEBB00",
 			bankGradientDark: "#FE8D00",
@@ -63,7 +64,7 @@ const config: Config = {
   		},
 		fontFamily: {
 			'bree-serif': 'var(--font-bree-serif)',
-			'nunito-sans': 'var(--font-nunito-sans)'
+			'lato': 'var(--font-lato)',
 		},
 		backgroundImage: {
 			"bank-gradient": "linear-gradient(90deg, #FE8D00 0%, #FEBB00 100%)",
