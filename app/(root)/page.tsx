@@ -56,7 +56,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
               <Image src="/assets/add.svg" alt='Add bank' width={16} height={16} /> New bank
             </Button>
           </div>
-          <CardsCarousel accountsData={accountsData} />
+          <CardsCarousel />
         </div>
 
         <RecentTractions 
