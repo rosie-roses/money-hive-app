@@ -65,6 +65,7 @@ const config: Config = {
 		fontFamily: {
 			'bree-serif': 'var(--font-bree-serif)',
 			'lato': 'var(--font-lato)',
+			'roboto-mono': 'var(--font-roboto-mono)',
 		},
 		backgroundImage: {
 			"bank-gradient": "linear-gradient(90deg, #FE8D00 0%, #FEBB00 100%)",

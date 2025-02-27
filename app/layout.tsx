@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bree_Serif, Lato } from "next/font/google";
+import { Bree_Serif, Lato, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
 
@@ -13,6 +13,12 @@ const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
   weight: ["400", '700']
+});
+
+const robotoMono =  Roboto_Mono({
+  variable: "--font-roboto-mono",
+  subsets: ["latin"],
+  weight: ["400", '600', '700']
 });
 
 export const metadata: Metadata = {
@@ -31,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${breeSerif.variable} ${lato.variable} antialiased`}
+        className={`${breeSerif.variable} ${lato.variable} ${robotoMono.variable} antialiased`}
       >
         {children}
       </body>
