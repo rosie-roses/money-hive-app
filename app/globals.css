@@ -258,6 +258,43 @@
   .header-two {
     @apply text-18 font-semibold text-gray-900;
   }
+
+  .recent-transactions {
+    @apply flex w-full flex-col gap-6;
+  }
+
+  .view-all-btn {
+    @apply text-14 rounded-lg border border-gray-300 px-4 py-2.5 font-semibold text-gray-700;
+  }
+
+  .recent-transactions {
+    @apply flex w-full flex-col gap-6;
+  }
+
+  .recent-transactions-label {
+    @apply text-20 md:text-24 font-semibold text-gray-900;
+  }
+
+  .recent-transactions-tablist {
+    @apply custom-scrollbar mb-8 flex w-full flex-nowrap;
+  }
+
+  .banktab-item {
+    @apply flex transition-all shadow-none outline-none;
+  }
+
+  .bank-info {
+    @apply gap-[18px] flex p-4 transition-all border bg-honey-25 border-transparent;
+  }
+
+  .bank-info_content {
+    @apply flex flex-1 items-center justify-between gap-2 overflow-hidden;
+  }
+
+  .category-badge {
+    @apply flex-center truncate w-fit gap-1 rounded-2xl border-[1.5px] py-[2px] pl-1.5 pr-2;
+  }
+
 }
 
 

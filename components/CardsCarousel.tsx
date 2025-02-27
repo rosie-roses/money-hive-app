@@ -10,7 +10,6 @@ import { Card, CardContent } from "./ui/card";
 import CreditCard from "./CreditCard"; // Import the CreditCard component
 
 const CardsCarousel = ({ accountsData }: any) => {
-  console.log(accountsData); // logs the array of accounts
   return (
     <section className="w-full flex items-center justify-center">
       <Carousel className="w-full max-w-[90%]">

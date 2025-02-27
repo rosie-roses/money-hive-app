@@ -1,5 +1,6 @@
 import CardsCarousel from '@/components/CardsCarousel';
 import HeaderBox from '@/components/HeaderBox';
+import RecentTractions from '@/components/RecentTractions';
 import TotalBalanceBox from '@/components/TotalBalanceBox';
 import { Button } from '@/components/ui/button';
 import { getAccount, getAccounts } from '@/lib/actions/bank.actions';
@@ -9,7 +10,8 @@ import React from 'react';
 
 const Home = async ({ searchParams }: SearchParamProps) => {
   const { id, page } = await searchParams;
-  // const currentPage = Number(page as string) || 1;
+
+  const currentPage = Number(page as string) || 1;
 
   const loggedIn = await getLoggedInUser();
 
@@ -25,8 +27,6 @@ const Home = async ({ searchParams }: SearchParamProps) => {
   const appwriteItemId = (id as string) || accountsData[0]?.appwriteItemId;
   
   const account = await getAccount({ appwriteItemId: appwriteItemId });
-
-  console.log({accountsData, account});
   
   return (
     <section className='home'>
@@ -45,6 +45,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
             totalCurrentBalance={accounts?.totalCurrentBalance}
           />
         </header>
+
         <div className='flex flex-col items-start mt-4'>
           <div className='flex flex-row justify-between gap-x-4 items-center mb-8'>
             <h2 className='text-24 font-semibold'>My banks</h2>
@@ -57,6 +58,13 @@ const Home = async ({ searchParams }: SearchParamProps) => {
           </div>
           <CardsCarousel accountsData={accountsData} />
         </div>
+
+        <RecentTractions 
+          accounts={accountsData}
+          transactions={account?.transactions}
+          appwriteItemId={appwriteItemId}
+          page={currentPage}
+        />
       </div>
     </section>
   );
