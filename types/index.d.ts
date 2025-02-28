@@ -327,3 +327,9 @@ declare interface getBankProps {
 declare interface getBankByAccountIdProps {
   accountId: string;
 }
+
+declare interface TransactionHistoryProps {
+  accounts: Account[];
+  initialSelectedAccountId: string;
+  initialTransactions: any[];
+}
