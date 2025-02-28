@@ -7,13 +7,13 @@ const CreditCard = ({ account, showBalance = true }: CreditCardProps) => {
   return (
     <div
       key={account.id}
-      className="relative w-full h-full max-h-[230px] max-w-[360px]"
+      className="flex flex-col w-full h-full items-start"
     >
+      {/* Link component wrapping only the card */}
       <Link
-        href={`transaction-history/?id=${account.appwriteItemId}`}
-        className="block w-full h-full"
+        href={`/transaction-history/?id=${account.appwriteItemId}`}
+        className="relative flex w-full min-h-[200px] h-full max-h-[230px] max-w-[360px] bg-gradient-to-r from-[#111111] to-[#333333] rounded-lg p-4 text-white shadow-lg"
       >
-        <div className="w-full h-full bg-gradient-to-r from-[#111111] to-[#333333] rounded-lg p-4 text-white shadow-lg overflow-hidden">
           <div className="flex justify-between items-center w-full absolute top-4 left-0 right-0 px-4">
             <div className="flex-shrink-0">
               <Image
@@ -33,7 +33,7 @@ const CreditCard = ({ account, showBalance = true }: CreditCardProps) => {
             <div className="text-xl font-bold mb-2 truncate w-full">
               {account.name}
             </div>
-            <div className="text-xl font-mono tracking-wide">
+            <div className="text-xl font-roboto-mono">
               **** **** **** {account.mask}
             </div>
           </div>
@@ -41,14 +41,14 @@ const CreditCard = ({ account, showBalance = true }: CreditCardProps) => {
           <div className="flex justify-between items-center w-full absolute bottom-4 left-0 right-0 px-4 font-roboto-mono">
             <div className="flex flex-col">
               <span className="text-xs text-[#c5c5c5] mb-1 truncate">
-                Available balance
+                Balance
               </span>
               <p>${account.availableBalance} USD</p>
             </div>
 
             <div className="flex flex-col">
               <span className="text-xs text-[#c5c5c5] mb-1 truncate">
-                Expiry date
+                Expiry Date
               </span>
               <p>●● / ●●</p>
             </div>
@@ -57,9 +57,14 @@ const CreditCard = ({ account, showBalance = true }: CreditCardProps) => {
               <Image src="/assets/chip.svg" width={48} height={32} alt="Chip" />
             </div>
           </div>
-        </div>
       </Link>
-      {showBalance && <Copy title={account?.sharableId} />}
+
+      {/* Show Copy component below the card */}
+      {showBalance && (
+        <div className="w-full h-full">
+          <Copy title={account?.sharableId} />
+        </div>
+      )}
     </div>
   );
 };

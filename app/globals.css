@@ -272,7 +272,7 @@
   }
 
   .recent-transactions-label {
-    @apply text-20 md:text-24 font-semibold text-gray-900;
+    @apply text-24 md:text-24 font-semibold text-gray-900;
   }
 
   .recent-transactions-tablist {
@@ -312,7 +312,7 @@
   }
 
   .my-banks {
-    @apply flex h-screen max-h-screen w-full flex-col gap-8 p-8 xl:py-12;
+    @apply flex w-full flex-col gap-8 p-8 xl:py-12;
   }
 
   .payment-transfer {

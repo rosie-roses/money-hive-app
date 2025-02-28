@@ -23,8 +23,10 @@ const RecentTransactions = ({
 
   return (
     <section className="recent-transactions">
-      <header className="flex items-center justify-between">
-        <h2 className="recent-transactions-label">Recent Transactions</h2>
+      <header className="flex justify-between gap-4 sm:gap-0">
+        <h2 className="recent-transactions-label">
+          Recent Transactions
+        </h2>
         <Link
           href={`/transaction-history/?id=${appwriteItemId}`}
           className="view-all-btn"
@@ -32,18 +34,23 @@ const RecentTransactions = ({
           View all
         </Link>
       </header>
+
       <Tabs defaultValue={appwriteItemId} className="w-full">
-        <TabsList className="px-1 py-4 bg-[#f9fafb]">
+        <TabsList className="bg-[#f9fafb] flex overflow-x-auto">
           {accounts.map((account: Account) => (
-            <TabsTrigger key={account.id} value={account.appwriteItemId}>
+            <TabsTrigger
+              key={account.id}
+              value={account.appwriteItemId}
+              className="flex-shrink-0 min-w-[150px] sm:min-w-[200px]"
+            >
               <BankTabItem
-                key={account.id}
                 account={account}
                 appwriteItemId={appwriteItemId}
               />
             </TabsTrigger>
           ))}
         </TabsList>
+
         {accounts.map((account: Account) => (
           <TabsContent
             value={account.appwriteItemId}

@@ -22,8 +22,8 @@ const CardsCarousel = async () => {
       return;
     };
   return (
-    <section className="w-full flex items-center justify-center">
-      <Carousel className="w-full max-w-[90%]">
+    <section className="w-full flex items-start justify-center">
+      <Carousel className="w-full max-w-[80%] md:max-w-[90%]">
         <CarouselContent className="-ml-1">
           {accounts?.data?.map((account: Account) => (
             <CarouselItem
