@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import { Card, CardContent } from "./ui/card";
-import CreditCard from "./CreditCard"; // Import the CreditCard component
+import CreditCard from "./CreditCard";
 import { getLoggedInUser } from "@/lib/actions/user.actions";
 import { getAccounts } from "@/lib/actions/bank.actions";
 
@@ -30,7 +30,7 @@ const CardsCarousel = async () => {
               key={account.id}
               className="pl-1 lg:basis-1/2 xl:basis-1/3"
             >
-              <div className="p-1">
+              <div className="p-2">
                 <Card className="max-w-[420px] h-[230px] shadow-none p-0 m-0 border-none overflow-hidden">
                   <CardContent className="flex items-center justify-center p-0 m-0 w-full h-full">
                     <CreditCard key={account.id} account={account} showBalance={false} />
