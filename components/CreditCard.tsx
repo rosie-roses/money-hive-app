@@ -6,7 +6,6 @@ import Copy from "./Copy";
 import Link from "next/link";
 
 const CreditCard = ({ account, showBalance = true }: CreditCardProps) => {
-  // List of gradient images in the assets folder
   const gradientImages = [
     "/assets/gradients/gradient-1.svg",
     "/assets/gradients/gradient-2.svg",
@@ -15,10 +14,8 @@ const CreditCard = ({ account, showBalance = true }: CreditCardProps) => {
     "/assets/gradients/gradient-5.svg",
   ];
 
-  // State to store the randomly selected gradient
   const [randomGradient, setRandomGradient] = useState<string>("");
 
-  // Randomly select a gradient image on component mount
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * gradientImages.length);
     setRandomGradient(gradientImages[randomIndex]);
@@ -26,14 +23,13 @@ const CreditCard = ({ account, showBalance = true }: CreditCardProps) => {
 
   return (
     <div key={account.id} className="flex flex-col w-full h-full items-start">
-      {/* Link component wrapping only the card */}
       <Link
         href={`/transaction-history/?id=${account.appwriteItemId}`}
         className="relative flex w-full min-h-[200px] h-full max-h-[230px] max-w-[360px] rounded-lg p-4 text-white shadow-lg"
         style={{
           backgroundImage: `url(${randomGradient})`,
-          backgroundSize: "cover",  // Ensures the background covers the card
-          backgroundPosition: "center",  // Keeps the background centered
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="flex justify-between items-center w-full absolute top-4 left-0 right-0 px-4">

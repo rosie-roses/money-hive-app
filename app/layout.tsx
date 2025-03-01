@@ -2,31 +2,30 @@ import type { Metadata } from "next";
 import { Bree_Serif, Lato, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-
 const breeSerif = Bree_Serif({
   variable: "--font-bree-serif",
   subsets: ["latin"],
-  weight: ["400"]
+  weight: ["400"],
 });
 
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
-  weight: ["400", '700']
+  weight: ["400", "700"],
 });
 
-const robotoMono =  Roboto_Mono({
+const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
   subsets: ["latin"],
-  weight: ["400", '600', '700']
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: "MoneyHive",
   description: "MoneyHive is a modern banking platform for everyone.",
   icons: {
-    icon: "/assets/logo.svg"
-  }
+    icon: "/assets/logo.svg",
+  },
 };
 
 export default function RootLayout({

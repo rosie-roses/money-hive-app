@@ -30,7 +30,10 @@ const MobileNav = ({ user }: MobileNavProps) => {
             className="cursor-pointer"
           />
         </SheetTrigger>
-        <SheetContent side="left" className="border-none max-w-[290px] md:max-w-[290px]">
+        <SheetContent
+          side="left"
+          className="border-none max-w-[290px] md:max-w-[290px]"
+        >
           <VisuallyHidden>
             <SheetTitle>Menu</SheetTitle>
           </VisuallyHidden>

@@ -12,15 +12,15 @@ import { getLoggedInUser } from "@/lib/actions/user.actions";
 import { getAccounts } from "@/lib/actions/bank.actions";
 
 const CardsCarousel = async () => {
-   const loggedIn = await getLoggedInUser();
-  
-    const accounts = await getAccounts({ 
-      userId: loggedIn?.$id
-    });
-  
-    if (!accounts) {
-      return;
-    };
+  const loggedIn = await getLoggedInUser();
+
+  const accounts = await getAccounts({
+    userId: loggedIn?.$id,
+  });
+
+  if (!accounts) {
+    return;
+  }
   return (
     <section className="w-full flex items-start justify-center">
       <Carousel className="w-full max-w-[80%] md:max-w-[90%]">
@@ -33,7 +33,11 @@ const CardsCarousel = async () => {
               <div className="p-2">
                 <Card className="max-w-[420px] h-[230px] shadow-none p-0 m-0 border-none overflow-hidden">
                   <CardContent className="flex items-center justify-center p-0 m-0 w-full h-full">
-                    <CreditCard key={account.id} account={account} showBalance={false} />
+                    <CreditCard
+                      key={account.id}
+                      account={account}
+                      showBalance={false}
+                    />
                   </CardContent>
                 </Card>
               </div>
