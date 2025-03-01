@@ -1,4 +1,7 @@
-# MoneyHive
+<div style="display: flex; align-items: start;">
+  <img src="../money-hive-app/public/assets/logo.svg" alt="logo" width="45" height="45" style="margin-right: 10px;" />
+  <h1>MoneyHive</h1>
+</div>
 
 ## <a name="table">Table of Contents</a>
 
