@@ -1,6 +1,4 @@
-# MoneyHive
-
-<img src="./public/assets/banner.png" alt="logo" width="400"> 
+<img src="./public/assets/banner.png" alt="logo" width="300"> 
 
 ## <a name="table">Table of Contents</a>
 
