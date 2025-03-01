@@ -15,6 +15,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { VisuallyHidden } from "@radix-ui/themes";
 import Footer from "./Footer";
+import Badge from "./Badge";
 
 const MobileNav = ({ user }: MobileNavProps) => {
   const pathname = usePathname();
@@ -91,7 +92,10 @@ const MobileNav = ({ user }: MobileNavProps) => {
               </nav>
             </SheetClose>
 
-            <Footer user={user} type="mobile" />
+            <div className="flex flex-col mb-8">
+              <Footer user={user} type="mobile" />
+              <Badge />
+            </div>
           </div>
         </SheetContent>
       </Sheet>

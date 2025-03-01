@@ -148,7 +148,7 @@
 
   /* Sidebar */
   .sidebar {
-    @apply sticky left-0 top-0 flex h-screen w-[275px] md:w-[290px] flex-col justify-between border-r border-gray-200 bg-white pt-8 text-white max-xl:hidden sm:p-4 xl:p-6 2xl:w-[355px];
+    @apply sticky left-0 top-0 flex h-screen w-[275px] md:w-[290px] flex-col border-r justify-between border-gray-200 bg-white pt-8 text-white max-xl:hidden sm:p-4 xl:p-6 2xl:w-[355px];
   }
 
   .sidebar-logo {
@@ -344,7 +344,7 @@
   }
 
   .github-badge {
-    @apply absolute top-5 right-5 p-2 rounded-lg border border-gray-200 flex font-roboto-mono gap-2 text-xs items-center bg-white;
+    @apply rounded-lg p-2 items-center border border-gray-200 flex font-roboto-mono gap-2 text-xs justify-center text-gray-900;
   }  
   
 }

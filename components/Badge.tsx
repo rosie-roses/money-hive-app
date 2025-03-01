@@ -5,7 +5,7 @@ import React from "react";
 const Badge = () => {
   return (
     <Link
-      href="https://github.com/yourusername/yourrepository"
+      href="https://github.com/rosie-roses/money-hive-app"
       target="_blank"
       className="github-badge"
     >

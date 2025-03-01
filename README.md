@@ -133,9 +133,28 @@ If you'd like to test the application, here’s what you need to know:
 - You do not need to provide a mobile number or code. Simply click **"Get code"** and **"Submit"**.
 - After signing in, select a bank account to connect, check all the checkboxes, and you should be able to complete the connection.
 
-### Test User
+### Test Users
 If you want to skip the sign-up process and quickly explore the app, you are welcome to use the test user credentials:
-- **Email**: ```alice@wonderland.com```
-- **Password**: ```12345678```
+
+1. Alice Wonderland
+    - **Email**: ```alice@wonderland.com```
+    - **Password**: ```12345678```
+
+2. Snow White
+    - **Email**: ```snow.white@enchantedforest.com```
+    - **Password**: ```12345678```
 
 This will allow you to access the app without having to sign up.
+
+#### Testing Tip: Transferring Funds Between Test Users
+Once logged in, you can experiment with transferring funds between these two test users. Follow these steps:
+
+1. Log in to the **recipient** test user account (the user who will receive the funds).
+2. Navigate to the **"My Banks"** page and locate the bank accounts associated with the user.
+3. Copy the **Shareable ID** of the bank account you want to receive funds in.
+4. Log out and log in to the **sender** test user account (the user sending the funds).
+5. Go to the **Transfer Funds** page and paste the copied Shareable ID to initiate the transfer of funds between the two accounts.
+
+This will allow you to see how funds are transferred between users in the app.
+
+Thank you for reading and I hope you enjoy exploring the app and testing its features! 💖

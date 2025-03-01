@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Bree_Serif, Lato, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import Badge from "@/components/Badge";
 
 const breeSerif = Bree_Serif({
   variable: "--font-bree-serif",
@@ -39,7 +38,6 @@ export default function RootLayout({
       <body
         className={`${breeSerif.variable} ${lato.variable} ${robotoMono.variable} antialiased`}
       >
-        <Badge />
         {children}
       </body>
     </html>
