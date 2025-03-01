@@ -333,3 +333,9 @@ declare interface TransactionHistoryProps {
   initialSelectedAccountId: string;
   initialTransactions: any[];
 }
+
+declare type CustomProgressProps = React.ComponentPropsWithoutRef<
+  typeof ProgressPrimitive.Root
+> & {
+  indicatorClassName: string;
+};

@@ -23,32 +23,6 @@ export const sidebarLinks = [
 
 export const topCategoryStyles = {
   "Food and Drink": {
-    bg: "bg-blue-25",
-    circleBg: "bg-blue-100",
-    text: {
-      main: "text-blue-900",
-      count: "text-blue-700",
-    },
-    progress: {
-      bg: "bg-blue-100",
-      indicator: "bg-blue-700",
-    },
-    icon: "/icons/monitor.svg",
-  },
-  Travel: {
-    bg: "bg-success-25",
-    circleBg: "bg-success-100",
-    text: {
-      main: "text-success-900",
-      count: "text-success-700",
-    },
-    progress: {
-      bg: "bg-success-100",
-      indicator: "bg-success-700",
-    },
-    icon: "/icons/coins.svg",
-  },
-  default: {
     bg: "bg-pink-25",
     circleBg: "bg-pink-100",
     text: {
@@ -59,7 +33,59 @@ export const topCategoryStyles = {
       bg: "bg-pink-100",
       indicator: "bg-pink-700",
     },
-    icon: "/icons/shopping-bag.svg",
+    icon: "/assets/food-drink.svg",
+  },
+  Travel: {
+    bg: "bg-blue-25",
+    circleBg: "bg-blue-100",
+    text: {
+      main: "text-blue-900",
+      count: "text-blue-700",
+    },
+    progress: {
+      bg: "bg-blue-100",
+      indicator: "bg-blue-700",
+    },
+    icon: "/assets/travel.svg",
+  },
+  Transfer: {
+    bg: "bg-red-50",
+    circleBg: "bg-red-100",
+    text: {
+      main: "text-red-900",
+      count: "text-red-700",
+    },
+    progress: {
+      bg: "bg-red-100",
+      indicator: "bg-red-700",
+    },
+    icon: "/assets/money-transfer.svg",
+  },
+  Payment: {
+    bg: "bg-success-50",
+    circleBg: "bg-success-100",
+    text: {
+      main: "text-success-900",
+      count: "text-success-700",
+    },
+    progress: {
+      bg: "bg-success-100",
+      indicator: "bg-success-700",
+    },
+    icon: "/assets/payment.svg",
+  },
+  default: {
+    bg: "bg-honey-25",
+    circleBg: "bg-honey-100",
+    text: {
+      main: "text-honey-900",
+      count: "text-honey-700",
+    },
+    progress: {
+      bg: "bg-honey-100",
+      indicator: "bg-honey-700",
+    },
+    icon: "/assets/trolley.svg",
   },
 };
 

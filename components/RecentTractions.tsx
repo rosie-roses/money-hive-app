@@ -5,6 +5,8 @@ import { BankTabItem } from "./BankTabItem";
 import BankInfo from "./BankInfo";
 import TransactionsTable from "./TransactionsTable";
 import { Pagination } from "./Pagination";
+import { countTransactionCategories } from "@/lib/utils";
+import Category from "./Category";
 
 const RecentTransactions = ({
   accounts,
@@ -20,7 +22,7 @@ const RecentTransactions = ({
     indexOfFirstTransaction,
     indexOfLastTransaction
   );
-
+  const categories: CategoryCount[] = countTransactionCategories(transactions);
   return (
     <section className="recent-transactions">
       <header className="flex justify-between gap-4 sm:gap-0">
@@ -64,6 +66,15 @@ const RecentTransactions = ({
                 <Pagination totalPages={totalPages} page={page} />
               </div>
             )}
+
+            <div>
+              <div className="header-two">Top Categories</div>
+              <div className="flex flex-col mt-5 space-y-5">
+                {categories.map((category, index) => (
+                  <Category key={category.name} category={category} />
+                ))}
+              </div>
+            </div>
           </TabsContent>
         ))}
       </Tabs>
