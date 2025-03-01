@@ -19,7 +19,7 @@ const CreditCard = ({ account, showBalance = true }: CreditCardProps) => {
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * gradientImages.length);
     setRandomGradient(gradientImages[randomIndex]);
-  }, []);
+  }, [gradientImages]);
 
   return (
     <div key={account.id} className="flex flex-col w-full h-full items-start">
