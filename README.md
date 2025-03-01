@@ -13,9 +13,11 @@
 
 MoneyHive is a financial SaaS platform built with **Next.js** and **TypeScript**. It allows users to manage their finances by securely connecting to multiple bank accounts, viewing real-time transactions, and transferring funds to other platform users.
 
+The application has been deployed to production and is now live! 🎉 You can access it at [money-hive-app.vercel.app](https://money-hive-app.vercel.app).
+
 This project was inspired by a [JavaScript Mastery tutorial on YouTube](https://www.youtube.com/watch?v=PuOVqP_cjkE&t=11024s&ab_channel=JavaScriptMastery). You can also find the original code on their [GitHub repository](https://github.com/adrianhajdin/banking/tree/main).
 
-However, I have made several customisations of my own to this project, including additional components, updated styling, and new features to give it a unique flair and improve its functionality.
+However, I have made several customisations of my own to this project, including additional components, updated styling, and new features to give it a unique flair and improve its functionality ✨.
 
 ## <a name="tech-stack">🛠️ Tech Stack</a>
 
