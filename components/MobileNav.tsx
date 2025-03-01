@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 import { VisuallyHidden } from "@radix-ui/themes";
 import Footer from "./Footer";
 import Badge from "./Badge";
+import PlaidLink from "./PlaidLink";
 
 const MobileNav = ({ user }: MobileNavProps) => {
   const pathname = usePathname();
@@ -89,6 +90,8 @@ const MobileNav = ({ user }: MobileNavProps) => {
                     </SheetClose>
                   );
                 })}
+
+                <PlaidLink user={user} />
               </nav>
             </SheetClose>
 

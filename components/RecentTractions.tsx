@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -7,6 +9,7 @@ import TransactionsTable from "./TransactionsTable";
 import { Pagination } from "./Pagination";
 import { countTransactionCategories } from "@/lib/utils";
 import Category from "./Category";
+import { useRouter } from "next/navigation";
 
 const RecentTransactions = ({
   accounts,
@@ -22,6 +25,11 @@ const RecentTransactions = ({
     indexOfFirstTransaction,
     indexOfLastTransaction
   );
+  const router = useRouter();
+
+  const handleAccountSelect = async (id: string) => {
+    router.push(`/?id=${id}&page=1`, { scroll: false });
+  };
   const categories: CategoryCount[] = countTransactionCategories(transactions);
   return (
     <section className="recent-transactions">
@@ -41,6 +49,7 @@ const RecentTransactions = ({
             <TabsTrigger
               key={account.id}
               value={account.appwriteItemId}
+              onClick={() => handleAccountSelect(account.appwriteItemId)}
               className="flex-shrink-0 min-w-[150px] sm:min-w-[200px]"
             >
               <BankTabItem account={account} appwriteItemId={appwriteItemId} />
@@ -67,7 +76,7 @@ const RecentTransactions = ({
               </div>
             )}
 
-            <div>
+            <div className="py-4 max-lg:pb-6">
               <div className="header-two">Top Categories</div>
               <div className="flex flex-col mt-5 space-y-5">
                 {categories.map((category, index) => (

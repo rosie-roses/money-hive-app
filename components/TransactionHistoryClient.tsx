@@ -24,7 +24,11 @@ const TransactionHistoryClient = ({
   const [selectedAccountId, setSelectedAccountId] = useState<string>(
     initialSelectedAccountId
   );
-  const [selected, setSeclected] = useState(accounts[0]);
+  const [selected, setSeclected] = useState(
+    accounts.find(
+      (account) => account.appwriteItemId === initialSelectedAccountId
+    )
+  );
 
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -85,7 +89,7 @@ const TransactionHistoryClient = ({
     <div>
       <div>
         <Select
-          defaultValue={selected.id}
+          defaultValue={selected?.id}
           onValueChange={(value) => handleAccountSelect(value)}
         >
           <SelectTrigger className={`flex w-full bg-white gap-3 md:w-[300px]`}>
@@ -95,7 +99,7 @@ const TransactionHistoryClient = ({
               height={20}
               alt="account"
             />
-            <p className="line-clamp-1 w-full text-left">{selected.name}</p>
+            <p className="line-clamp-1 w-full text-left">{selected?.name}</p>
           </SelectTrigger>
           <SelectContent className={`w-full bg-white md:w-[300px]`} align="end">
             <SelectGroup>

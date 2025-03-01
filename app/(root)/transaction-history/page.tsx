@@ -8,6 +8,7 @@ const TransactionHistory = async ({ searchParams }: SearchParamProps) => {
   const { id, page } = await searchParams;
   const currentPage = Number(page as string) || 1;
 
+  let selectedAccountId;
   const loggedIn = await getLoggedInUser();
   const accounts = await getAccounts({
     userId: loggedIn?.$id,
@@ -16,9 +17,13 @@ const TransactionHistory = async ({ searchParams }: SearchParamProps) => {
   if (!accounts) {
     return;
   }
-
   const accountsData = accounts?.data;
-  const selectedAccountId = id || accountsData[0]?.appwriteItemId;
+
+  if (!id || Array.isArray(id)) {
+    selectedAccountId = accountsData[0]?.appwriteItemId;
+  } else {
+    selectedAccountId = id;
+  }
 
   const account = await getAccount({ appwriteItemId: selectedAccountId });
 
