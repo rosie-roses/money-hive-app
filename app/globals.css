@@ -338,6 +338,10 @@
   .payment-transfer_btn {
     @apply text-14 w-full bg-bank-gradient font-semibold text-white shadow-form !important;
   }
+
+  .auth-asset {
+    @apply flex h-screen w-full sticky top-0 items-center justify-end bg-honey-25 max-lg:hidden;
+  }
 }
 
 
