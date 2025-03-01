@@ -7,7 +7,7 @@
 3. 🔮 [Features](#features)
 4. 🚫 [Limitations](#limitations)
 5. 🚀 [Quick Start](#quick-start)
-6. 🧪 [Testing the Application](#testing-the-application)
+6. 🧪 [Testing the Application](#testing-application)
 
 ## <a name="introduction">📝 Introduction</a>
 
