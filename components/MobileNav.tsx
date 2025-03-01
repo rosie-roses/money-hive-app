@@ -19,7 +19,7 @@ import Footer from "./Footer";
 const MobileNav = ({ user }: MobileNavProps) => {
   const pathname = usePathname();
   return (
-    <section className="w-full max-w-[290px]">
+    <section className="w-full max-w-[290px] md:max-w-[290px]">
       <Sheet>
         <SheetTrigger>
           <Image
@@ -30,7 +30,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
             className="cursor-pointer"
           />
         </SheetTrigger>
-        <SheetContent side="left" className="border-none max-w-[290px]">
+        <SheetContent side="left" className="border-none max-w-[290px] md:max-w-[290px]">
           <VisuallyHidden>
             <SheetTitle>Menu</SheetTitle>
           </VisuallyHidden>

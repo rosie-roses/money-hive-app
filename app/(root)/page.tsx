@@ -1,12 +1,9 @@
 import CardsCarousel from '@/components/CardsCarousel';
 import HeaderBox from '@/components/HeaderBox';
-import PlaidLink from '@/components/PlaidLink';
 import RecentTractions from '@/components/RecentTractions';
 import TotalBalanceBox from '@/components/TotalBalanceBox';
-import { Button } from '@/components/ui/button';
 import { getAccount, getAccounts } from '@/lib/actions/bank.actions';
 import { getLoggedInUser } from '@/lib/actions/user.actions';
-import Image from 'next/image';
 import React from 'react';
 
 const Home = async ({ searchParams }: SearchParamProps) => {
