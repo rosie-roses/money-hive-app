@@ -340,8 +340,13 @@
   }
 
   .auth-asset {
-    @apply flex h-screen w-full sticky top-0 items-center justify-end bg-honey-25 max-lg:hidden;
+    @apply flex h-screen w-full sticky top-0 items-center justify-end bg-honey-25 max-xl:hidden;
   }
+
+  .github-badge {
+    @apply absolute top-5 right-5 p-2 rounded-lg border border-gray-200 flex font-roboto-mono gap-2 text-xs items-center bg-white;
+  }  
+  
 }
 
 
