@@ -1,4 +1,4 @@
-<img src="./public/assets/banner.png" alt="logo" width="300"> 
+<img src="./public/assets/banner.png" alt="logo" width="100%"> 
 
 ## <a name="table">Table of Contents</a>
 
@@ -18,6 +18,8 @@ The application has been deployed to production and is now live! 🎉 You can ac
 This project was inspired by a [JavaScript Mastery tutorial on YouTube](https://www.youtube.com/watch?v=PuOVqP_cjkE&t=11024s&ab_channel=JavaScriptMastery). You can also find the original code on their [GitHub repository](https://github.com/adrianhajdin/banking/tree/main).
 
 However, I have made several customisations of my own to this project, including additional components, updated styling, and new features to give it a unique flair and improve its functionality ✨.
+
+<img src="./public/assets/preview.svg" alt="banner" width="100%"> 
 
 ## <a name="tech-stack">🛠️ Tech Stack</a>
 
